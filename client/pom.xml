@@ -21,11 +21,19 @@
 	</repositories>
 
 	<dependencies>
+		<!-- Add guava plugin to use google Hashing -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>11.0</version>
+		</dependency>
+
 		<dependency>
 			<groupId>com.mashape.unirest</groupId>
 			<artifactId>unirest-java</artifactId>
 			<version>1.3.8</version>
 		</dependency>
+
 	</dependencies>
 
 	<build>
