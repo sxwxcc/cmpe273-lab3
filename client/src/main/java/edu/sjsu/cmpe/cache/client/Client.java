@@ -32,14 +32,14 @@ public class Client {
 		
 		for (int i = 0; i < hashmap.size() + 1; i++) {
 
-			int bucket = Hashing.consistentHash(Hashing.md5().hashInt(i),servers.size());
+			int bucket = Hashing.consistentHash(Hashing.md5().hashLong(i),servers.size());
 			servers.get(bucket).put(i,hashmap.get(i));
 			System.out.println("put" + i + ":" + hashmap.get(i) + "=>servers.get(bucket)");
 			}
 		
 		for (int i = 0; i < hashmap.size() + 1; i++) {
 
-			int bucket = Hashing.consistentHash(Hashing.md5().hashInt(i),servers.size());
+			int bucket = Hashing.consistentHash(Hashing.md5().hashLong(i),servers.size());
 			servers.get(bucket).get(i);
 			System.out.println("get" + i + ":" + hashmap.get(i) + "=>servers.get(bucket)");
 			}
